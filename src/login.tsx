@@ -50,7 +50,7 @@ const Label = styled.Text`
   `;
 
 
-const Login = ({ login, signup }: any) => {
+export function Login({ login, signup }: any) {
 
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
@@ -104,7 +104,7 @@ const Login = ({ login, signup }: any) => {
     );
 };
 
-export default Login;
+
 
 const styles = StyleSheet.create({
     container: {
