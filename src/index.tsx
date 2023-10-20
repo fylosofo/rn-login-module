@@ -13,12 +13,6 @@ type ButtonProps = {
   color: string;
 };
 
-const ImageLogo = styled.Image`
-    width: 120px;
-    height: 120px;
-    align-self: center;
-    margin-top: 16px;
-  `;
 const InputContainer = styled.View`
     flex: 1;
     padding: 16px;
@@ -54,7 +48,7 @@ export function Login({ login, signup }: any) {
 
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
-  //<ImageLogo source={require('../assets/images/logo.png')} />
+
   return (
     <ScrollView style={[styles.container, styles.redBackground]} contentContainerStyle={{ flexGrow: 1 }}>
       <SafeAreaView />
