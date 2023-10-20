@@ -46,8 +46,8 @@ const Label = styled.Text`
 
 export function Login({ login, signup }: any) {
 
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
+  // const [email, setEmail] = useState<string>('');
+  // const [password, setPassword] = useState<string>('');
 
   return (
     <ScrollView style={[styles.container, styles.redBackground]} contentContainerStyle={{ flexGrow: 1 }}>
