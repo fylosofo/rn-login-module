@@ -54,11 +54,11 @@ export function Login({ login, signup }: any) {
 
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
-
+  //<ImageLogo source={require('../assets/images/logo.png')} />
   return (
     <ScrollView style={[styles.container, styles.redBackground]} contentContainerStyle={{ flexGrow: 1 }}>
       <SafeAreaView />
-      {/* <ImageLogo source={require('../assets/images/logo.png')} /> */}
+
       <Text style={styles.title}>Come-Come</Text>
       <InputContainer>
         <Text>E-mail:</Text>
