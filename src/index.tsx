@@ -1,11 +1,7 @@
 import React from 'react';
 import {
   View,
-  Text,
-  StyleSheet,
-  SafeAreaView,
-  TouchableOpacity,
-  ScrollView,
+  Text
 } from 'react-native';
 import styled from 'styled-components/native';
 
@@ -44,16 +40,10 @@ const Label = styled.Text`
   `;
 
 
-export function Login({ login, signup, email, setEmail, password, setPassword }: any) {
-
-  // const [email, setEmail] = useState<string>('');
-  // const [password, setPassword] = useState<string>('');
+export function LoginInput({ login, email, setEmail, password, setPassword }: any) {
 
   return (
-    <ScrollView style={[styles.container, styles.redBackground]} contentContainerStyle={{ flexGrow: 1 }}>
-      <SafeAreaView />
-
-      <Text style={styles.title}>Come-Come</Text>
+    <View>
       <InputContainer>
         <Text>E-mail:</Text>
         <Input
@@ -81,88 +71,6 @@ export function Login({ login, signup, email, setEmail, password, setPassword }:
         </Button>
 
       </InputContainer>
-      <Text style={styles.divider}>
-        ------------------ ou ------------------
-      </Text>
-      <View style={styles.containerFooter}>
-        <TouchableOpacity
-          style={[styles.button, styles.redBackground]}
-          onPress={signup}>
-          <Text style={[styles.label, styles.blackLabel, styles.underline]}>
-            Não possui uma conta?{' '}
-            <Text style={styles.boldWeight}>Crie agora mesmo</Text>
-          </Text>
-        </TouchableOpacity>
-      </View>
-    </ScrollView>
+    </View>
   );
 };
-
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-  },
-  title: {
-    fontSize: 26,
-    marginTop: 24,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    color: '#000',
-  },
-  containerInputs: {
-    flex: 2,
-    justifyContent: 'center',
-  },
-  textInput: {
-    height: 40,
-    borderWidth: 0.3,
-    borderColor: '#000',
-    marginTop: 8,
-    borderRadius: 5,
-    padding: 5,
-    backgroundColor: '#FFF'
-  },
-  button: {
-    height: 45,
-    backgroundColor: '#000',
-    justifyContent: 'center',
-    marginTop: 16,
-    borderRadius: 5,
-  },
-  label: {
-    color: '#FFF',
-    textAlign: 'center',
-  },
-  whiteBackground: {
-    backgroundColor: '#FFF',
-  },
-  redBackground: {
-    backgroundColor: '#e94444',
-  },
-  blackLabel: {
-    color: '#000',
-  },
-  containerFooter: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-  boldWeight: {
-    fontWeight: 'bold',
-  },
-  divider: {
-    textAlign: 'center',
-    color: 'black',
-  },
-  underline: {
-    textDecorationLine: 'none',
-  },
-  imageLogo: {
-    width: 120,
-    height: 120,
-    alignSelf: 'center',
-    //marginTop: 140,
-  },
-});
