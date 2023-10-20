@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   View,
   Text,
@@ -44,7 +44,7 @@ const Label = styled.Text`
   `;
 
 
-export function Login({ login, signup }: any) {
+export function Login({ login, signup, email, setEmail, password, setPassword }: any) {
 
   // const [email, setEmail] = useState<string>('');
   // const [password, setPassword] = useState<string>('');
@@ -61,7 +61,7 @@ export function Login({ login, signup }: any) {
           placeholderTextColor={'#fefefe'}
           autoCapitalize="none"
           keyboardType="default"
-          onChangeText={(e: any) => setEmail(e)}
+          onChangeText={setEmail}
           value={email}
         />
         <Text>Senha:</Text>
@@ -71,7 +71,7 @@ export function Login({ login, signup }: any) {
           autoCapitalize="none"
           keyboardType="default"
           secureTextEntry
-          onChangeText={(p: any) => setPassword(p)}
+          onChangeText={setPassword}
           value={password}
           maxLength={50}
         />
