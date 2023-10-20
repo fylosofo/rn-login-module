@@ -50,7 +50,7 @@ const Label = styled.Text`
   `;
 
 
-export function Login({ login, signup }: any) {
+export function LoginX({ login, signup }: any) {
 
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
