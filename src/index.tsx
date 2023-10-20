@@ -58,7 +58,7 @@ export function Login({ login, signup }: any) {
   return (
     <ScrollView style={[styles.container, styles.redBackground]} contentContainerStyle={{ flexGrow: 1 }}>
       <SafeAreaView />
-      <ImageLogo source={require('../assets/images/logo.png')} />
+      {/* <ImageLogo source={require('../assets/images/logo.png')} /> */}
       <Text style={styles.title}>Come-Come</Text>
       <InputContainer>
         <Text>E-mail:</Text>
