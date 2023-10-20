@@ -50,7 +50,7 @@ const Label = styled.Text`
   `;
 
 
-export function Login({ login, signup }: any) {
+export function Login({ login, signup, logo }: any) {
 
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
@@ -58,7 +58,7 @@ export function Login({ login, signup }: any) {
   return (
     <ScrollView style={[styles.container, styles.redBackground]} contentContainerStyle={{ flexGrow: 1 }}>
       <SafeAreaView />
-      <ImageLogo source={require('../../assets/images/logo.png')} />
+      <ImageLogo source={require(logo)} />
       <Text style={styles.title}>Come-Come</Text>
       <InputContainer>
         <Text>E-mail:</Text>
